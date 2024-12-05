@@ -36,7 +36,7 @@ const AudioUploadButton = () => {
   return (
     <div className="w-full h-screen bg-black flex flex-col gap-5 justify-center items-center">
       <h1 className="text-white font-semibold text-4xl">
-        Welcome to our Voxify website
+        Welcome to our Chloe’s Card website
       </h1>
       <div className="flex flex-col items-center gap-4">
         <input
