@@ -19,7 +19,7 @@ const AudioUploadButton = () => {
       const file = event.target.files[0];
       const audioRef = ref(storage, `audios/${Date.now()}-${file.name}`);
 
-      const snapshot = await uploadBytes(audioRef, file);
+      const snapshot = await uploadBytes(audioRef, file); 
       const url = await getDownloadURL(snapshot.ref);
 
       setAudioUrl(url);
