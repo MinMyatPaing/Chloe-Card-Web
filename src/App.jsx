@@ -19,7 +19,7 @@ const AudioUploadButton = () => {
       const file = event.target.files[0];
       const audioRef = ref(storage, `audios/${Date.now()}-${file.name}`);
 
-      const snapshot = await uploadBytes(audioRef, file); 
+      const snapshot = await uploadBytes(audioRef, file);
       const url = await getDownloadURL(snapshot.ref);
 
       setAudioUrl(url);
@@ -41,7 +41,7 @@ const AudioUploadButton = () => {
       <div className="flex flex-col items-center gap-4">
         <input
           type="file"
-          accept="audio/*"
+          accept=".mp3, .wav, .m4a, .aac, audio/*"
           onChange={handleUpload}
           className="hidden"
           id="audio-input"
